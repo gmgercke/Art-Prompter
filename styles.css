@@ -1,0 +1,29 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.app-wrapp {
+  margin: 50px auto;
+  padding: 35px;
+  max-width: 550px;
+  border: 1px solid grey;
+  text-align: center;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+.go-button {
+  color: white;
+  background-color: blueviolet;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: block;
+  margin: 0 0 0 15px;
+}
+
+p {
+  margin: 25px 0 0 0;
+  text-align: center;
+}
