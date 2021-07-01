@@ -1,15 +1,21 @@
 body {
   font-family: "Courier New", Courier, monospace;
-  background-color: rgba(214, 168, 245, 0.5);
+  background-color: rgb(37, 24, 48);
 }
 
 .app-wrapp {
-  background-color: rgba(244, 230, 252, 0.5);
-  margin: 50px auto;
+  background-color: rgb(211, 177, 231);
+  margin: 50px auto 25px;
   padding: 35px;
   max-width: 700px;
   border-radius: 10px;
-  box-shadow: 0px 3px 5px 5px rgba(174, 131, 231, 0.5);
+  box-shadow: 10px 10px 0px rgb(164, 128, 231);
+  text-align: center;
+}
+
+.body-wrapp {
+  margin: 0 auto;
+  max-width: 700px;
   text-align: center;
 }
 
@@ -21,8 +27,9 @@ h1 {
 .go-button {
   color: white;
   background-color: blueviolet;
-  border: 1px solid black;
+  border: 1px solid blueviolet;
   border-radius: 5px;
+  box-shadow: 5px 5px 0px rgb(164, 128, 231);
   display: block;
   margin: 0 0 0 15px;
 }
@@ -33,7 +40,7 @@ h1 {
   width: 15px;
   height: 15px;
 
-  border: 1px solid #999;
+  border: 1px solid black;
   transition: 0.2s all linear;
   margin-right: 5px;
 }
@@ -49,9 +56,23 @@ p {
 
 .placeholder {
   background-color: rgba(255, 255, 255, 0.5);
-  box-shadow: 0px 3px 5px 5px rgba(174, 131, 231, 0.5);
+  box-shadow: 5px 5px 0px rgb(164, 128, 231);
   border-radius: 5px;
-  line-height: 230%;
+  line-height: 250%;
   padding: 5px;
-  margin: 0 auto;
+  margin: 5px;
+}
+
+.footer {
+  color: rgb(211, 177, 231);
+  font-size: 12px;
+}
+
+a {
+  color: rgb(164, 128, 231);
+}
+
+a:hover {
+  color: rgb(164, 128, 231);
+  text-decoration: none;
 }
