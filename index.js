@@ -16,10 +16,9 @@ function handleButtonClick() {
       promptsHost.innerHTML = "";
 
       for (const selectedPrompt of selectedPrompts) {
-        promptsHost.innerHTML += placeholderTemplate.replace(
-          contentToken,
-          selectedPrompt
-        );
+        promptsHost.innerHTML += placeholderTemplate
+          .replace(contentToken, selectedPrompt)
+          .toLowerCase();
       }
     }
   }
@@ -37,17 +36,40 @@ function getRandomPromptsCount(count) {
   const result = [];
 
   if (count === 1) {
-    result.push(prompts[0][Math.floor(Math.random() * prompts[0].length)]);
+    const flattenedPromptsAll = prompts.toString().split(",");
+    result.push(
+      flattenedPromptsAll[
+        Math.floor(Math.random() * flattenedPromptsAll.length)
+      ]
+    );
   } else if (count === 3) {
+    const flattenedPromptsPartial = prompts[2].toString().split(",");
     result.push(prompts[0][Math.floor(Math.random() * prompts[0].length)]);
     result.push(prompts[1][Math.floor(Math.random() * prompts[1].length)]);
-    result.push(prompts[3][Math.floor(Math.random() * prompts[3].length)]);
+    result.push(
+      flattenedPromptsPartial[
+        Math.floor(Math.random() * flattenedPromptsPartial.length)
+      ]
+    );
   } else {
+    const flattenedPromptsPartial = prompts[2].toString().split(",");
     result.push(prompts[0][Math.floor(Math.random() * prompts[0].length)]);
     result.push(prompts[1][Math.floor(Math.random() * prompts[1].length)]);
-    result.push(prompts[2][Math.floor(Math.random() * prompts[2].length)]);
-    result.push(prompts[3][Math.floor(Math.random() * prompts[3].length)]);
-    result.push(prompts[0][Math.floor(Math.random() * prompts[0].length)]);
+    result.push(
+      flattenedPromptsPartial[
+        Math.floor(Math.random() * flattenedPromptsPartial.length)
+      ]
+    );
+    result.push(
+      flattenedPromptsPartial[
+        Math.floor(Math.random() * flattenedPromptsPartial.length)
+      ]
+    );
+    result.push(
+      flattenedPromptsPartial[
+        Math.floor(Math.random() * flattenedPromptsPartial.length)
+      ]
+    );
   }
 
   return result;
