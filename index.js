@@ -43,31 +43,41 @@ function getRandomPromptsCount(count) {
       ]
     );
   } else if (count === 3) {
-    const flattenedPromptsPartial = prompts[2].toString().split(",");
-    result.push(prompts[0][Math.floor(Math.random() * prompts[0].length)]);
+    const flattenedPromptsZero = prompts[0].toString().split(",");
+    const flattenedPromptsTwo = prompts[2].toString().split(",");
+    result.push(
+      flattenedPromptsZero[
+        Math.floor(Math.random() * flattenedPromptsZero.length)
+      ]
+    );
     result.push(prompts[1][Math.floor(Math.random() * prompts[1].length)]);
     result.push(
-      flattenedPromptsPartial[
-        Math.floor(Math.random() * flattenedPromptsPartial.length)
+      flattenedPromptsTwo[
+        Math.floor(Math.random() * flattenedPromptsTwo.length)
       ]
     );
   } else {
-    const flattenedPromptsPartial = prompts[2].toString().split(",");
-    result.push(prompts[0][Math.floor(Math.random() * prompts[0].length)]);
+    const flattenedPromptsZero = prompts[0].toString().split(",");
+    const flattenedPromptsTwo = prompts[2].toString().split(",");
+    result.push(
+      flattenedPromptsZero[
+        Math.floor(Math.random() * flattenedPromptsZero.length)
+      ]
+    );
+    result.push(
+      flattenedPromptsZero[
+        Math.floor(Math.random() * flattenedPromptsZero.length)
+      ]
+    );
     result.push(prompts[1][Math.floor(Math.random() * prompts[1].length)]);
     result.push(
-      flattenedPromptsPartial[
-        Math.floor(Math.random() * flattenedPromptsPartial.length)
+      flattenedPromptsTwo[
+        Math.floor(Math.random() * flattenedPromptsTwo.length)
       ]
     );
     result.push(
-      flattenedPromptsPartial[
-        Math.floor(Math.random() * flattenedPromptsPartial.length)
-      ]
-    );
-    result.push(
-      flattenedPromptsPartial[
-        Math.floor(Math.random() * flattenedPromptsPartial.length)
+      flattenedPromptsTwo[
+        Math.floor(Math.random() * flattenedPromptsTwo.length)
       ]
     );
   }
