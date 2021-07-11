@@ -63,16 +63,31 @@ p {
   margin: 5px;
 }
 
-.footer {
-  color: rgb(211, 177, 231);
+footer {
+  padding: 10px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
+  background-color: rgb(164, 128, 231);
+  color: rgb(0, 0, 0);
   font-size: 12px;
 }
 
+.support {
+  margin-left: 20px;
+}
+
+img {
+  max-width: 25px;
+}
+
 a {
-  color: rgb(164, 128, 231);
+  color: white;
 }
 
 a:hover {
-  color: rgb(164, 128, 231);
+  color: white;
   text-decoration: none;
 }
